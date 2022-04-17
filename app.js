@@ -41,11 +41,23 @@ $('#submit').on('click', function() {
     if (($('#rating').val() >= 0) && ($('#rating').val() <= 10) && (movieTitle.length >= 2)) {
         $('#movies').append(`<li>${$('#movie-title').val()}, Rating: ${$('#rating').val()}</li><button id="remove">Remove</button>`);
     } else {
-        alert('Rating must be between 0 and 10.');
+        alert('Rating must be between 0 and 10 and movie title must have at least two characters.');
     }
 }); 
 
 $('#movies').on('click', '#remove', function() {
     $(this).parent().remove();
 });
+
+$('#sort-alpha').on('click', function() {
+    // Source: (https://stackoverflow.com/questions/1134976/how-may-i-sort-a-list-alphabetically-using-jquery, accessed 16 April 2022)
+    // Source: (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare, accessed 16 April 2022)
+    $('#movies').each(function(){
+        $(this).children('li').sort((a, b) => a.innerText.localeCompare(b.innerText)).appendTo(this);
+    });
+}); 
+
+$('#sort-low-to-high').on('click', function() {
+    
+}); 
 
