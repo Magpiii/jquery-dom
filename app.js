@@ -57,7 +57,24 @@ $('#sort-alpha').on('click', function() {
     });
 }); 
 
-$('#sort-low-to-high').on('click', function() {
-    
-}); 
+// Source: (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort, accessed 19 April 2022)
+// Source: (https://stackoverflow.com/questions/14160498/how-can-i-sort-elements-by-numerical-value-of-data-attribute, accessed 19 April 2022)
+// $('#sort-low-to-high').on('click', function() {
+//     // Pass all movie objects into array. 
+//     let movies = Array($('.movies'));
+
+//     for (let movie of movies) {
+//         movies.push(movie);
+//     }
+
+//     // Sort movies array by val. 
+//     movies.sort(function (a, b) {
+//         return a.val() - b.val();
+//      }); 
+
+//     // Append sorted movies to the movies ul. 
+//     for (let film of movies) {
+//         $('.movies').append(film);
+//     }
+// });
 
